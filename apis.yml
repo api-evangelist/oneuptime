@@ -24,7 +24,7 @@ apis:
     properties:
       - type: Documentation
         url: https://oneuptime.com/docs
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/OneUptime/oneuptime
       - url: openapi/oneuptime-openapi.yml
         type: OpenAPI
@@ -33,7 +33,7 @@ common:
     url: https://oneuptime.com
   - type: Documentation
     url: https://oneuptime.com/docs
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/OneUptime/oneuptime
 maintainers:
   - FN: Kin Lane
