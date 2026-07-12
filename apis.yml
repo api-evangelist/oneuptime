@@ -30,6 +30,10 @@ apis:
       - url: openapi/oneuptime-openapi.yml
         type: OpenAPI
 common:
+  - type: TrustCenter
+    url: security/oneuptime-trust-center.yml
+  - type: DomainSecurity
+    url: security/oneuptime-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/oneuptime
   - type: Website
@@ -38,6 +42,8 @@ common:
     url: https://oneuptime.com/docs
   - type: GitHubOrganization
     url: https://github.com/OneUptime/oneuptime
+  - url: https://oneuptime.com/blog/rss.xml
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
