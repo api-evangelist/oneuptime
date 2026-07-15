@@ -30,6 +30,8 @@ apis:
       - url: openapi/oneuptime-openapi.yml
         type: OpenAPI
 common:
+  - type: AgenticAccess
+    url: agentic-access/oneuptime-agentic-access.yml
   - type: TrustCenter
     url: security/oneuptime-trust-center.yml
   - type: DomainSecurity
