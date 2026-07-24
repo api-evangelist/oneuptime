@@ -1,15 +1,13 @@
 openapi: 3.1.0
 info:
-  title: OneUptime API
-  description: >-
-    OneUptime API for monitoring, incident management, alerts, on-call duty,
-    workflows, and status pages. Endpoints are scoped under a project.
-  version: "1.0"
-x-generated-from: https://oneuptime.com/api/openapi/spec
-x-generated-by: claude-crawl-2026-05-08
+  title: OneUptime Projects API
+  description: OneUptime API for monitoring, incident management, alerts, on-call duty, workflows, and status pages. Endpoints are scoped under a project.
+  version: '1.0'
 servers:
-  - url: https://oneuptime.com/api
-    description: OneUptime API
+- url: https://oneuptime.com/api
+  description: OneUptime API
+tags:
+- name: Projects
 paths:
   /projects:
     post:
@@ -20,15 +18,19 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     get:
       summary: Get project details
       operationId: getProject
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
     put:
       summary: Update project settings
       operationId: updateProject
@@ -37,15 +39,19 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}/probes:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     get:
       summary: List custom probes for a project
       operationId: listProbes
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
     post:
       summary: Deploy a new monitoring probe
       operationId: createProbe
@@ -54,20 +60,24 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}/probes/{probeId}:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
-      - name: probeId
-        in: path
-        required: true
-        schema:
-          type: string
+    - $ref: '#/components/parameters/ProjectId'
+    - name: probeId
+      in: path
+      required: true
+      schema:
+        type: string
     get:
       summary: Get probe details
       operationId: getProbe
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
     put:
       summary: Update probe configuration
       operationId: updateProbe
@@ -76,21 +86,27 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
     delete:
       summary: Remove a probe
       operationId: deleteProbe
       responses:
         '204':
           description: Probe deleted
+      tags:
+      - Projects
   /projects/{projectId}/incidents:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     get:
       summary: List incidents in a project
       operationId: listIncidents
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
     post:
       summary: Create a new incident
       operationId: createIncident
@@ -99,15 +115,19 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}/monitors:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     get:
       summary: List monitors
       operationId: listMonitors
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
     post:
       summary: Create a new monitor
       operationId: createMonitor
@@ -116,27 +136,33 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}/alerts:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     get:
       summary: List alerts
       operationId: listAlerts
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}/on-call-policies:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     get:
       summary: List on-call duty policies and escalation rules
       operationId: listOnCallPolicies
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
   /projects/{projectId}/workflows:
     parameters:
-      - $ref: '#/components/parameters/ProjectId'
+    - $ref: '#/components/parameters/ProjectId'
     post:
       summary: Create a workflow for automated incident response
       operationId: createWorkflow
@@ -145,6 +171,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Generic'
+      tags:
+      - Projects
 components:
   parameters:
     ProjectId:
@@ -169,3 +197,5 @@ components:
           schema:
             type: object
             additionalProperties: true
+x-generated-from: https://oneuptime.com/api/openapi/spec
+x-generated-by: claude-crawl-2026-05-08
