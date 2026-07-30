@@ -4,7 +4,19 @@ description: >-
   OneUptime is an open source observability platform combining monitoring, incident management, status pages, and
   on-call scheduling in one OpenTelemetry-native tool.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oneuptime.png
 tags:
   - Observability
   - Open Source
@@ -13,22 +25,19 @@ created: '2026-03-25'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: oneuptime:oneuptime
-    name: OneUptime
-    description: >-
-      OneUptime is an open source observability platform combining monitoring, incident management, status pages, and
-      on-call scheduling in one OpenTelemetry-native tool.
-    humanURL: https://oneuptime.com
-    tags:
-      - Observability
-      - Open Source
-    properties:
-      - type: Documentation
-        url: https://oneuptime.com/docs
-      - type: GitHubRepository
-        url: https://github.com/OneUptime/oneuptime
-      - url: openapi/oneuptime-openapi.yml
-        type: OpenAPI
+- aid: oneuptime:oneuptime-projects-api
+  name: OneUptime Projects API
+  description: The Projects API from OneUptime — 9 operation(s) for projects.
+  humanURL: https://oneuptime.com
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/oneuptime-projects-api-openapi.yml
+  - type: Documentation
+    url: https://oneuptime.com/docs
+  - type: GitHubRepository
+    url: https://github.com/OneUptime/oneuptime
 common:
   - type: AgenticAccess
     url: agentic-access/oneuptime-agentic-access.yml
