@@ -1,0 +1,171 @@
+openapi: 3.1.0
+info:
+  title: OneUptime API
+  description: >-
+    OneUptime API for monitoring, incident management, alerts, on-call duty,
+    workflows, and status pages. Endpoints are scoped under a project.
+  version: "1.0"
+x-generated-from: https://oneuptime.com/api/openapi/spec
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://oneuptime.com/api
+    description: OneUptime API
+paths:
+  /projects:
+    post:
+      summary: Create a new OneUptime project
+      operationId: createProject
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      summary: Get project details
+      operationId: getProject
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    put:
+      summary: Update project settings
+      operationId: updateProject
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}/probes:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      summary: List custom probes for a project
+      operationId: listProbes
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    post:
+      summary: Deploy a new monitoring probe
+      operationId: createProbe
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}/probes/{probeId}:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+      - name: probeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Get probe details
+      operationId: getProbe
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    put:
+      summary: Update probe configuration
+      operationId: updateProbe
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    delete:
+      summary: Remove a probe
+      operationId: deleteProbe
+      responses:
+        '204':
+          description: Probe deleted
+  /projects/{projectId}/incidents:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      summary: List incidents in a project
+      operationId: listIncidents
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    post:
+      summary: Create a new incident
+      operationId: createIncident
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}/monitors:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      summary: List monitors
+      operationId: listMonitors
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+    post:
+      summary: Create a new monitor
+      operationId: createMonitor
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}/alerts:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      summary: List alerts
+      operationId: listAlerts
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}/on-call-policies:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    get:
+      summary: List on-call duty policies and escalation rules
+      operationId: listOnCallPolicies
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+  /projects/{projectId}/workflows:
+    parameters:
+      - $ref: '#/components/parameters/ProjectId'
+    post:
+      summary: Create a workflow for automated incident response
+      operationId: createWorkflow
+      requestBody:
+        $ref: '#/components/requestBodies/Generic'
+      responses:
+        '200':
+          $ref: '#/components/responses/Generic'
+components:
+  parameters:
+    ProjectId:
+      name: projectId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBodies:
+    Generic:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true
+  responses:
+    Generic:
+      description: Successful response
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties: true

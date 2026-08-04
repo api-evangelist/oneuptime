@@ -1,0 +1,14 @@
+{
+  "provider": "oneuptime",
+  "sources": [
+    "oneuptime-projects-api-openapi.yml"
+  ],
+  "outputs": [
+    "oneuptime-projects-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
