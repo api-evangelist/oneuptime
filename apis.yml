@@ -19,6 +19,9 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oneuptime.png
 tags:
   - Observability
+  - Open-Source
+tags_raw:
+  - Observability
   - Open Source
 url: https://raw.githubusercontent.com/api-evangelist/oneuptime/refs/heads/main/apis.yml
 created: '2026-03-25'
@@ -30,6 +33,8 @@ apis:
   description: The Projects API from OneUptime — 9 operation(s) for projects.
   humanURL: https://oneuptime.com
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
