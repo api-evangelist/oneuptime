@@ -1,7 +1,7 @@
 {
   "provider": "oneuptime",
   "sources": [
-    "oneuptime-projects-api-openapi.yml"
+    "_ae-authored/oneuptime-openapi.yml"
   ],
   "outputs": [
     "oneuptime-projects-api-openapi.yml"
@@ -9,6 +9,28 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "oneuptime-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "oneuptime-openapi.yml: tagged paths POST /projects -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId} -> Projects",
+    "oneuptime-openapi.yml: tagged paths PUT /projects/{projectId} -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId}/probes -> Projects",
+    "oneuptime-openapi.yml: tagged paths POST /projects/{projectId}/probes -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId}/probes/{probeId} -> Projects",
+    "oneuptime-openapi.yml: tagged paths PUT /projects/{projectId}/probes/{probeId} -> Projects",
+    "oneuptime-openapi.yml: tagged paths DELETE /projects/{projectId}/probes/{probeId} -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId}/incidents -> Projects",
+    "oneuptime-openapi.yml: tagged paths POST /projects/{projectId}/incidents -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId}/monitors -> Projects",
+    "oneuptime-openapi.yml: tagged paths POST /projects/{projectId}/monitors -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId}/alerts -> Projects",
+    "oneuptime-openapi.yml: tagged paths GET /projects/{projectId}/on-call-policies -> Projects",
+    "oneuptime-openapi.yml: tagged paths POST /projects/{projectId}/workflows -> Projects",
+    "oneuptime-openapi.yml: declared missing tag: Projects",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "oneuptime-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: OneUptime Projects API
   description: OneUptime API for monitoring, incident management, alerts, on-call duty, workflows, and status pages. Endpoints are scoped under a project.
@@ -181,17 +181,17 @@ components:
       required: true
       schema:
         type: string
-  requestBodies:
+  responses:
     Generic:
-      required: true
+      description: Successful response
       content:
         application/json:
           schema:
             type: object
             additionalProperties: true
-  responses:
+  requestBodies:
     Generic:
-      description: Successful response
+      required: true
       content:
         application/json:
           schema:
