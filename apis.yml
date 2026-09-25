@@ -57,6 +57,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/OneUptime/oneuptime
 common:
+  - type: VendorFacets
+    url: vendor-facets/oneuptime-vendor-facets.yml
   - type: IssueTracker
     url: https://github.com/OneUptime/oneuptime/issues
   - type: Releases
