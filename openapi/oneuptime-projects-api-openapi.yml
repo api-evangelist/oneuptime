@@ -181,17 +181,17 @@ components:
       required: true
       schema:
         type: string
-  responses:
+  requestBodies:
     Generic:
-      description: Successful response
+      required: true
       content:
         application/json:
           schema:
             type: object
             additionalProperties: true
-  requestBodies:
+  responses:
     Generic:
-      required: true
+      description: Successful response
       content:
         application/json:
           schema:
