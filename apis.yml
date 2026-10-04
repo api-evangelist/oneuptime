@@ -58,6 +58,9 @@ apis:
   - type: GitHubRepository
     url: https://github.com/OneUptime/oneuptime
 common:
+  - type: CapabilityMap
+    url: capabilities/oneuptime-capability-edges.yml
+    name: OneUptime Business Capability Map
   - type: VendorFacets
     url: vendor-facets/oneuptime-vendor-facets.yml
   - type: IssueTracker
